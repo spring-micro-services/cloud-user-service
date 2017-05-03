@@ -1,0 +1,16 @@
+server:
+  port: 8092
+spring:
+  application:
+    #name is to refer equivalent properties file in github. in this case config-repo 
+    #should contain order-server.yml or order-service.properties
+    name: user-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+      #Label is equals to branch in github
+      label: dev
+      #This is the profile name appended to properties /yml file
+      profile: default
+      name: user-service
+ 
